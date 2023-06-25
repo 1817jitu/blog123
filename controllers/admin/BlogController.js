@@ -1,5 +1,5 @@
 const BlogModel = require("../../models/Blog");
-const ContactModel = require("../../models/contact");
+const ContactModel = require("../../models/Contact");
 var cloudinary = require('cloudinary').v2;
 
 cloudinary.config({ 
