@@ -1,0 +1,78 @@
+<%- include('../header.ejs') %>
+  <!-- Banner Section -->
+  <section class="banner">
+    <div class="container-fluid">
+      <div class="carousel slide" data-bs-ride="carousel" id="a">
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#a" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#a" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#a" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+
+            <img src="image/banner0.jpg" class="w-100" alt="...">
+            <div class="carousel-caption col-md-6 text-start pt-4">
+              <!-- <a href="a" class="main-btn main-btn-yellow">Watch NOW</a> -->
+            </div>
+          </div>
+
+          <div class="carousel-item" data-bs-interval="3000">
+
+            <img src="image/banner.jpg" class="w-100" alt="...">
+            <div class="carousel-caption col-md-6 text-start pt-4">
+
+              <!-- <a href="a" class="main-btn main-btn-yellow">Watch NOW</a> -->
+            </div>
+          </div>
+
+          <div class="carousel-item" data-bs-interval="3000">
+
+            <img src="image/banner1.jpg" class="w-100" alt="...">
+            <div class="carousel-caption col-md-6 text-start pt-4">
+
+              <!-- <a href="a" class="main-btn main-btn-yellow">Watch NOW</a> -->
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#a" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#a" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+        <!--carousel end-->
+      </div>
+    </div><!-- container-fluid end -->
+  </section>
+  <!-- Banner Section End -->
+  <br>
+  <!-- Contain Section -->
+  <h4 class="text-center">BOLLYWOOD MOVIE:-</h4>
+  <div class="container">
+    <div class="row g-3">
+      <% b.forEach((item)=>{ %>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <img src="image/3idiot_poster.jpg" alt="" class="card-img-top">
+            <div class="card-body">
+              <p class="card-title text-center"><%= item.title %>3 Idiots</p>
+              <p class="card-title text-center"><%= item.createdAt.toLocaleDateString() %></p>
+
+              <p class="card-text" id="paraText"> <%= item.description.slice(0,97) %></p>
+              <a href="/blogDetail/<%= item._id %>" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+
+    </div>
+    <br>
+  </div>
+  </div> <!-- Contain Section End -->
+
+
+  <%-include('../footer.ejs') %>
