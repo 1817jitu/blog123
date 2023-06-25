@@ -16,7 +16,7 @@ const url3 = 'mongodb+srv://jitendra:1817jitu@cluster0.4ajl3na.mongodb.net/blogP
 // module.exports = connectDB
 const url = 'mongodb+srv://Nikhil910:Nikhil1234@cluster0.dvxk3u4.mongodb.net/blogwebsiteDB?retryWrites=true&w=majority'
 const connectDB = () =>{
-    return mongoose.connect('mongodb://0.0.0.0:27017/blogWebsite')
+    return mongoose.connect(url)
     // return mongoose.connect(url)
     .then(()=>{
         console.log('connected successfully !')
